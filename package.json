@@ -1,0 +1,52 @@
+{
+  "name": "diogow-portfolio",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal de Diogo José Varaschin de Oliveira - Desenvolvedor Back-End e Técnico de Suporte de TI",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "serve": "npx serve .",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "back-end",
+    "it-support",
+    "java",
+    "javascript",
+    "python",
+    "php",
+    "react",
+    "typescript",
+    "html",
+    "css"
+  ],
+  "author": {
+    "name": "Diogo José Varaschin de Oliveira",
+    "email": "diogo.varaschin@gmail.com",
+    "url": "https://diogow.dev"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diogoww/diogow.dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diogoww/diogow.dev/issues"
+  },
+  "homepage": "https://diogow.dev",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+} 

@@ -1,0 +1,27 @@
+{
+  "name": "Diogo Varaschin - Portfólio",
+  "short_name": "Diogo Varaschin",
+  "description": "Portfólio pessoal de Diogo José Varaschin de Oliveira - Desenvolvedor Back-End e Técnico de Suporte de TI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf5ff",
+  "theme_color": "#6a418f",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "src/images/avatar.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/images/avatar.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "pt-BR",
+  "dir": "ltr"
+} 

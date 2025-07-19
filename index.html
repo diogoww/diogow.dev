@@ -3,14 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Portfólio pessoal de Diogo José Varaschin de Oliveira - Desenvolvedor Back-End e Técnico de Suporte de TI. Conheça minhas habilidades em Java, JavaScript, Python, PHP e mais.">
+    <meta name="keywords" content="Diogo Varaschin, desenvolvedor, back-end, suporte técnico, Java, JavaScript, Python, PHP, React, TypeScript, HTML, CSS">
+    <meta name="author" content="Diogo José Varaschin de Oliveira">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://diogow.dev/">
+    <meta property="og:title" content="Diogo Varaschin - Portfólio">
+    <meta property="og:description" content="Portfólio pessoal de Diogo José Varaschin de Oliveira - Desenvolvedor Back-End e Técnico de Suporte de TI">
+    <meta property="og:image" content="https://diogow.dev/src/images/eu.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://diogow.dev/">
+    <meta property="twitter:title" content="Diogo Varaschin - Portfólio">
+    <meta property="twitter:description" content="Portfólio pessoal de Diogo José Varaschin de Oliveira - Desenvolvedor Back-End e Técnico de Suporte de TI">
+    <meta property="twitter:image" content="https://diogow.dev/src/images/eu.png">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6a418f">
+    <link rel="apple-touch-icon" href="src/images/avatar.png">
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts e CSS -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <title>Diogo J. V. de Oliveira</title>
+    <title>Diogo Varaschin - Desenvolvedor Back-End & Técnico de Suporte de TI</title>
 </head>
 <body>
     <header>
@@ -23,7 +53,7 @@
                     <a href="#about">Quem sou eu?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#tech">Técnologias</a>
+                    <a href="#tech">Tecnologias</a>
                 </li>
             </ul>
 
@@ -44,7 +74,7 @@
                     <a href="#about">Quem sou eu?</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#tech">Técnologias</a>
+                    <a href="#tech">Tecnologias</a>
                 </li>
             </ul>
 
@@ -59,30 +89,32 @@
             <div class="shape"></div>
             <div id="cta">
                 <h1 class="title">
-                    Olá, eu sou
-                    <span>Diogo Varaschin</span>
+                    <span>Olá, eu sou</span>
+                    <div class="name-wrapper">
+                        <span>Diogo</span> <span>Varaschin</span>
+                    </div>
                 </h1>
                 <p class="description">
                     Back-End Developer Student / IT Support Technician
                 </p>
 
                 <div class="social-media-buttons">
-                    <a href="https://github.com/diogoww" target="_blank">
+                    <a href="https://github.com/diogoww" target="_blank" aria-label="GitHub">
                         <i class="fa-brands fa-github"></i>
                     </a>
                     
-                    <a href="https://www.instagram.com/diogojvo/" target="_blank">
+                    <a href="https://www.instagram.com/diogojvo/" target="_blank" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                     
-                    <a href="https://www.linkedin.com/in/diogo-varaschin/" target="_blank">
+                    <a href="https://www.linkedin.com/in/diogo-varaschin/" target="_blank" aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
             </div>
             
             <div id="banner">
-                <img src="src/images/eu.png" alt="">
+                <img src="src/images/eu.png" alt="Diogo Varaschin">
             </div>
         </section>
 
@@ -131,86 +163,63 @@
         <section id="tech">
             <div id="tech_content">
                 <h2 class="section-title">
-                    Técnologias que estou estudando
+                    Tecnologias que estou estudando
                 </h2>
 
                 <div id="techs">
                     <div class="techz">
-                        <img src="src/images/icons/java-icon.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/java-icon.png" class="tech-avatar" alt="Java">
                         <div class="techz-content">
-                            <p>
-                                Java
-                            </p>
+                            <p>Java</p>
                         </div>
                     </div>
                 
-                
                     <div class="techz">
-                        <img src="src/images/icons/javascript-icon.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/javascript-icon.png" class="tech-avatar" alt="JavaScript">
                         <div class="techz-content">
-                            <p>
-                                JavaScript
-                            </p>
+                            <p>JavaScript</p>
                         </div>
                     </div>
                 
-                
                     <div class="techz">
-                        <img src="src/images/icons/php-icon.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/php-icon.png" class="tech-avatar" alt="PHP">
                         <div class="techz-content">
-                            <p>
-                                PHP
-                            </p>
+                            <p>PHP</p>
                         </div>
                     </div>
                 
-                
                     <div class="techz">
-                        <img src="src/images/icons/python-logo.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/python-logo.png" class="tech-avatar" alt="Python">
                         <div class="techz-content">
-                            <p>
-                                Python
-                            </p>
+                            <p>Python</p>
                         </div>
                     </div>
                 
-                
                     <div class="techz">
-                        <img src="src/images/icons/react-icon.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/react-icon.png" class="tech-avatar" alt="React">
                         <div class="techz-content">
-                            <p>
-                                React
-                            </p>
+                            <p>React</p>
                         </div>
                     </div>
                 
-                
                     <div class="techz">
-                        <img src="src/images/icons/typescript-logo.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/typescript-logo.png" class="tech-avatar" alt="TypeScript">
                         <div class="techz-content">
-                            <p>
-                                TypeScript
-                            </p>
+                            <p>TypeScript</p>
                         </div>
                     </div>
                 
-                
                     <div class="techz">
-                        <img src="src/images/icons/html-logo.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/html-logo.png" class="tech-avatar" alt="HTML5">
                         <div class="techz-content">
-                            <p>
-                                HTML5
-                            </p>
+                            <p>HTML5</p>
                         </div>
                     </div>
                 
-                
                     <div class="techz">
-                        <img src="src/images/icons/css-icon.png" class="tech-avatar" alt="">
+                        <img src="src/images/icons/css-icon.png" class="tech-avatar" alt="CSS3">
                         <div class="techz-content">
-                            <p>
-                                CSS3
-                            </p>
+                            <p>CSS3</p>
                         </div>
                     </div>
                 </div>
@@ -223,21 +232,21 @@
 
         <div id="footer_items">
             <span id="copyright">
-                &copy 2025 Diogo José Varaschin de Oliveira
+                &copy; 2025 Diogo José Varaschin de Oliveira
             </span>
 
             <div class="social-media-buttons">
-                <a href="https://github.com/diogoww" target="_blank">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                    
-                    <a href="https://www.instagram.com/diogojvo/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    
-                    <a href="https://www.linkedin.com/in/diogo-varaschin/" target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
+                <a href="https://github.com/diogoww" target="_blank" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                
+                <a href="https://www.instagram.com/diogojvo/" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/diogo-varaschin/" target="_blank" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
             </div>
         </div>
     </footer>

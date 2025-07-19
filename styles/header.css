@@ -1,10 +1,18 @@
 header {
     width: 100%;
-    padding: 28px 8%;
+    padding: 1.5rem 8%;
     position: sticky;
     top: 0;
-    background-color: var(--color-primary-1);
-    z-index: 3;
+    background-color: rgba(250, 245, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: var(--transition);
+    border-bottom: 1px solid rgba(169, 116, 208, 0.1);
+}
+
+header.scrolled {
+    box-shadow: var(--shadow-medium);
+    background-color: rgba(250, 245, 255, 0.98);
 }
 
 #navbar {
@@ -12,38 +20,144 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 #nav_logo {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var(--color-primary-6);
+    font-weight: 700;
+    text-decoration: none;
 }
 
 #nav_list {
     display: flex;
     list-style: none;
-    gap: 48px;
+    gap: 4rem;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.nav-item {
+    position: relative;
 }
 
 .nav-item a {
     text-decoration: none;
-    color: #1d1d1dad;
-    font-weight: 600;
+    color: var(--color-neutral-2);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: var(--transition);
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary-4), var(--color-primary-5));
+    transition: var(--transition);
+}
+
+.nav-item a:hover {
+    color: var(--color-primary-5);
+}
+
+.nav-item a:hover::after {
+    width: 100%;
 }
 
 .nav-item.active a {
-    color: var(--color-neutral-1);
-    border-bottom: 3px solid var(--color-primary-4);
+    color: var(--color-primary-5);
+    font-weight: 600;
+}
+
+.nav-item.active a::after {
+    width: 100%;
 }
 
 #mobile_btn {
     display: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primary-5);
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+#mobile_btn:hover {
+    background-color: var(--color-primary-2);
+    transform: scale(1.1);
 }
 
 #mobile_menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary-1);
+    border-top: 1px solid rgba(169, 116, 208, 0.1);
+    box-shadow: var(--shadow-medium);
+    padding: 1rem 0;
+    animation: slideDown 0.3s ease-out;
 }
 
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#mobile_menu.active {
+    display: block;
+}
+
+#mobile_nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    list-style: none;
+}
+
+#mobile_nav_list .nav-item {
+    text-align: center;
+}
+
+#mobile_nav_list .nav-item a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--color-neutral-1);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+#mobile_nav_list .nav-item a:hover {
+    background-color: var(--color-primary-2);
+    color: var(--color-primary-5);
+}
+
+#mobile_menu .btn-default {
+    margin: 1rem auto;
+    width: fit-content;
+}
+
+/* Responsividade */
 @media screen and (max-width: 1170px) {
     #nav_list,
     #navbar .btn-default {
@@ -52,27 +166,35 @@ header {
 
     #mobile_btn {
         display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
     }
-
-    #mobile_menu.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    
+    header {
+        padding: 1rem 5%;
     }
+}
 
-    #mobile_nav_list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
+@media screen and (max-width: 768px) {
+    header {
+        padding: 0.75rem 4%;
     }
+    
+    #mobile_menu {
+        padding: 0.75rem 0;
+    }
+    
+    #mobile_nav_list .nav-item a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
 
-    #mobile_nav_list .nav-item {
-        list-style: none;
-        text-align: center;
-    } 
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.5rem 3%;
+    }
+    
+    #mobile_btn {
+        font-size: 1.25rem;
+        padding: 0.25rem;
+    }
 }
