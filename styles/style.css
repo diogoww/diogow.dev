@@ -3,6 +3,7 @@
 @import url('home.css');
 @import url('about.css');
 @import url('tech.css');
+@import url('footer.css');
 
 :root {
     --color-primary-1: #faf5ff;  /* branco puxado pro roxo */
