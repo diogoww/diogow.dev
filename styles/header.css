@@ -3,7 +3,7 @@ header {
     padding: 1.5rem 8%;
     position: sticky;
     top: 0;
-    background-color: rgba(250, 245, 255, 0.95);
+    background-color: var(--color-primary-2);
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: var(--transition);
@@ -55,7 +55,6 @@ header.scrolled {
     overflow: hidden;
 }
 
-/* Novo efeito hover: underline animado com glow e preenchimento suave */
 .nav-item a::after {
     content: '';
     position: absolute;
@@ -66,7 +65,7 @@ header.scrolled {
     height: 4px;
     background: linear-gradient(90deg, var(--color-primary-4), var(--color-primary-5));
     border-radius: 2px;
-    box-shadow: 0 0 8px 2px var(--color-primary-4), 0 0 16px 4px var(--color-primary-5, #6a418f);
+    box-shadow: 0 2px 8px 0px var(--color-primary-4, #a974d0), 0 4px 12px 0px var(--color-primary-5, #6a418f, 0.12);
     transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s;
     z-index: 1;
 }
@@ -74,7 +73,7 @@ header.scrolled {
 .nav-item a:hover::after,
 .nav-item.active a::after {
     transform: translateX(-50%) scaleX(1);
-    box-shadow: 0 0 16px 4px var(--color-primary-4), 0 0 32px 8px var(--color-primary-5, #6a418f);
+    box-shadow: 0 2px 12px 0px var(--color-primary-4, #a974d0, 0.18), 0 4px 18px 0px var(--color-primary-5, #6a418f, 0.10);
 }
 
 .nav-item a:hover {
