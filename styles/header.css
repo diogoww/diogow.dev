@@ -52,34 +52,36 @@ header.scrolled {
     transition: var(--transition);
     padding: 0.5rem 0;
     position: relative;
+    overflow: hidden;
 }
 
+/* Novo efeito hover: underline animado com glow e preenchimento suave */
 .nav-item a::after {
     content: '';
     position: absolute;
+    left: 50%;
     bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
+    transform: translateX(-50%) scaleX(0);
+    width: 80%;
+    height: 4px;
     background: linear-gradient(90deg, var(--color-primary-4), var(--color-primary-5));
-    transition: var(--transition);
+    border-radius: 2px;
+    box-shadow: 0 0 8px 2px var(--color-primary-4), 0 0 16px 4px var(--color-primary-5, #6a418f);
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s;
+    z-index: 1;
+}
+
+.nav-item a:hover::after,
+.nav-item.active a::after {
+    transform: translateX(-50%) scaleX(1);
+    box-shadow: 0 0 16px 4px var(--color-primary-4), 0 0 32px 8px var(--color-primary-5, #6a418f);
 }
 
 .nav-item a:hover {
     color: var(--color-primary-5);
-}
-
-.nav-item a:hover::after {
-    width: 100%;
-}
-
-.nav-item.active a {
-    color: var(--color-primary-5);
-    font-weight: 600;
-}
-
-.nav-item.active a::after {
-    width: 100%;
+    background: linear-gradient(90deg, rgba(169,116,208,0.08), rgba(106,65,143,0.10));
+    border-radius: 6px;
+    transition: var(--transition);
 }
 
 #mobile_btn {

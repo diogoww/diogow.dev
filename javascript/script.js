@@ -82,7 +82,7 @@ $(document).ready(function() {
         });
 
         $navItems.removeClass('active');
-        $(`.nav-item:eq(${activeSectionIndex})`).addClass('active');
+        $navItems.eq(activeSectionIndex).addClass('active');
     }
 
     function applyParallax(scrollTop) {
@@ -168,7 +168,7 @@ $(document).ready(function() {
             if ($target.length) {
                 const headerHeight = $header.outerHeight();
                 const targetOffset = $target.offset().top - headerHeight;
-                
+                // Se já está na seção, ainda faz o scroll (útil para recarregar a posição)
                 $html.animate({
                     scrollTop: targetOffset
                 }, config.animationDuration, 'easeInOutQuart');
@@ -300,48 +300,5 @@ $(document).ready(function() {
     }
 });
 
-// CSS adicional para animações
-const additionalCSS = `
-    .js-loaded { opacity: 1; }
-    .page-loaded { transition: opacity 0.5s ease; }
-    
-    .rotate {
-        animation: rotate 0.3s ease-in-out;
-    }
-    
-    @keyframes rotate {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(180deg); }
-    }
-    
-    .menu-open { overflow: hidden; }
-    
-    .in-view {
-        animation: fadeInUp 0.8s ease-out forwards;
-    }
-    
-    .nav-item a {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .nav-item a::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(169, 116, 208, 0.2), transparent);
-        transition: left 0.5s;
-    }
-    
-    .nav-item a:hover::before {
-        left: 100%;
-    }
-`;
-
-// Injetar CSS adicional
-const style = document.createElement('style');
-style.textContent = additionalCSS;
-document.head.appendChild(style);
+// Remover CSS adicional antigo que pode conflitar
+// (Remover o bloco que injeta .nav-item a::before e hover)
