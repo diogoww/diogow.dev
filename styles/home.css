@@ -76,8 +76,6 @@
     font-weight: inherit !important;
 }
 
-/* Removido o sublinhado do título principal - agora está no name-wrapper */
-
 #cta .description {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
     color: #666666;

@@ -71,7 +71,6 @@ footer .social-media-buttons a:hover {
     transform: translateY(-3px) scale(1.1);
 }
 
-/* Efeito de onda animada */
 footer::after {
     content: '';
     position: absolute;
@@ -93,7 +92,6 @@ footer::after {
     }
 }
 
-/* Responsividade */
 @media screen and (max-width: 1200px) {
     #footer_items {
         padding: 1.25rem 5% 1.75rem;
@@ -148,7 +146,6 @@ footer::after {
     }
 }
 
-/* Animações de entrada */
 #footer_items {
     animation: fadeInUp 0.8s ease-out;
 }

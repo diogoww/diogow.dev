@@ -102,7 +102,6 @@
     font-weight: 400;
 }
 
-/* Ícones para cada card */
 .infos-me:nth-child(1)::after {
     content: '🔧';
     position: absolute;
@@ -139,7 +138,6 @@
     opacity: 0.3;
 }
 
-/* Responsividade */
 @media screen and (max-width: 1400px) {
     #infos {
         grid-template-columns: repeat(2, 1fr);
@@ -201,7 +199,6 @@
     }
 }
 
-/* Animações */
 .infos-me {
     animation: fadeInUp 0.8s ease-out;
 }

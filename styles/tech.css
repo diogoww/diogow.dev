@@ -100,7 +100,6 @@
     color: var(--color-primary-5);
 }
 
-/* Efeitos especiais para cada tecnologia */
 .techz:nth-child(1) .tech-avatar { border: 2px solid #f89820; }
 .techz:nth-child(2) .tech-avatar { border: 2px solid #f7df1e; }
 .techz:nth-child(3) .tech-avatar { border: 2px solid #777bb4; }
@@ -110,7 +109,6 @@
 .techz:nth-child(7) .tech-avatar { border: 2px solid #e34f26; }
 .techz:nth-child(8) .tech-avatar { border: 2px solid #1572b6; }
 
-/* Responsividade */
 @media screen and (max-width: 1200px) {
     #techs {
         grid-template-columns: repeat(2, 1fr);
@@ -187,7 +185,6 @@
     }
 }
 
-/* Animações */
 .techz {
     animation: fadeInUp 0.8s ease-out;
 }
@@ -201,7 +198,6 @@
 .techz:nth-child(7) { animation-delay: 0.7s; }
 .techz:nth-child(8) { animation-delay: 0.8s; }
 
-/* Efeito de brilho no hover */
 .techz::after {
     content: '';
     position: absolute;

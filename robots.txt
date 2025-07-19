@@ -1,8 +1,6 @@
 User-agent: *
 Allow: /
 
-# Sitemap
 Sitemap: https://diogow.dev/sitemap.xml
 
-# Crawl-delay
 Crawl-delay: 1 

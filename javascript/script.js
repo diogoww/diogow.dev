@@ -1,12 +1,10 @@
 $(document).ready(function() {
-    // Configurações globais
     const config = {
         scrollOffset: 100,
         animationDuration: 800,
         mobileBreakpoint: 1170
     };
 
-    // Cache de elementos DOM
     const $window = $(window);
     const $body = $('body');
     const $header = $('header');
@@ -16,7 +14,6 @@ $(document).ready(function() {
     const $navItems = $('.nav-item');
     const $html = $('html');
 
-    // Inicialização
     init();
 
     function init() {
@@ -26,64 +23,49 @@ $(document).ready(function() {
         checkInitialScroll();
     }
 
-    // Configuração dos event listeners
     function setupEventListeners() {
-        // Menu mobile
         $mobileBtn.on('click', toggleMobileMenu);
         
-        // Fechar menu ao clicar em um link
         $('.nav-item a').on('click', closeMobileMenu);
         
-        // Scroll events
         $window.on('scroll', handleScroll);
         
-        // Resize events
         $window.on('resize', handleResize);
         
-        // Keyboard events
         $(document).on('keydown', handleKeydown);
         
-        // Smooth scroll para links internos
         $('a[href^="#"]').on('click', handleSmoothScroll);
     }
 
-    // Toggle do menu mobile
     function toggleMobileMenu() {
         $mobileMenu.toggleClass('active');
         $mobileBtn.find('i').toggleClass('fa-bars fa-x');
         $body.toggleClass('menu-open');
         
-        // Animar o ícone
         $mobileBtn.addClass('rotate');
         setTimeout(() => $mobileBtn.removeClass('rotate'), 300);
     }
 
-    // Fechar menu mobile
     function closeMobileMenu() {
         $mobileMenu.removeClass('active');
         $mobileBtn.find('i').removeClass('fa-x').addClass('fa-bars');
         $body.removeClass('menu-open');
     }
 
-    // Handle scroll
     function handleScroll() {
         const scrollTop = $window.scrollTop();
         
-        // Header effects
         if (scrollTop > config.scrollOffset) {
             $header.addClass('scrolled');
         } else {
             $header.removeClass('scrolled');
         }
         
-        // Active navigation
         updateActiveNavigation(scrollTop);
         
-        // Parallax effect para elementos
         applyParallax(scrollTop);
     }
 
-    // Atualizar navegação ativa
     function updateActiveNavigation(scrollTop) {
         let activeSectionIndex = 0;
         const headerHeight = $header.outerHeight();
@@ -103,7 +85,6 @@ $(document).ready(function() {
         $(`.nav-item:eq(${activeSectionIndex})`).addClass('active');
     }
 
-    // Efeito parallax
     function applyParallax(scrollTop) {
         const parallaxElements = $('.shape, .parallax');
         const speed = 0.5;
@@ -115,43 +96,37 @@ $(document).ready(function() {
         });
     }
 
-    // Handle resize
     function handleResize() {
         if ($window.width() > config.mobileBreakpoint) {
             closeMobileMenu();
         }
     }
 
-    // Handle keyboard
     function handleKeydown(e) {
-        // ESC para fechar menu
         if (e.keyCode === 27) {
             closeMobileMenu();
         }
         
-        // Setas para navegação
         if (e.keyCode === 38 || e.keyCode === 40) {
             e.preventDefault();
             navigateWithArrows(e.keyCode);
         }
     }
 
-    // Navegação com setas
     function navigateWithArrows(keyCode) {
         const currentSection = getCurrentSection();
         const totalSections = $sections.length;
         
         let nextSection;
-        if (keyCode === 38) { // Up arrow
+        if (keyCode === 38) { 
             nextSection = currentSection > 0 ? currentSection - 1 : totalSections - 1;
-        } else { // Down arrow
+        } else { 
             nextSection = currentSection < totalSections - 1 ? currentSection + 1 : 0;
         }
         
         scrollToSection(nextSection);
     }
 
-    // Obter seção atual
     function getCurrentSection() {
         const scrollTop = $window.scrollTop();
         const headerHeight = $header.outerHeight();
