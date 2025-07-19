@@ -1,10 +1,8 @@
 # Diogo Varaschin - Portfólio Pessoal
 
-![Portfólio Preview](src/images/eu.png)
-
 ## 📋 Sobre o Projeto
 
-Este é o portfólio pessoal de Diogo José Varaschin de Oliveira, um desenvolvedor Back-End e técnico de suporte de TI. O site apresenta uma interface moderna, responsiva e interativa que destaca suas habilidades técnicas e experiência profissional.
+Este é o meu portfólio pessoal, sou um estudante de desenvolvimento Back-End e técnico de suporte de TI. O site apresenta uma interface moderna, responsiva e interativa que destaca suas habilidades técnicas e experiência profissional.
 
 ## ✨ Características
 
