@@ -128,7 +128,7 @@
 }
 
 #banner img:hover {
-    transform: scale(1.02);
+    transform: none !important;
     filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
 }
 
@@ -212,20 +212,68 @@
 
 @media screen and (max-width: 768px) {
     #home {
-        padding: 3rem 4% 2rem;
-        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding: 2rem 2vw 1rem;
+        gap: 1.2rem;
+        background: none !important;
     }
-    
-    #cta .title {
-        font-size: 2.5rem;
+    #banner {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 90vw;
+        max-width: 340px;
+        height: 320px;
+        margin: 0 auto 1.2rem auto;
+        background: #301934;
+        border-radius: 36px;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+        overflow: hidden;
+        position: relative;
     }
-    
-    #cta .description {
-        font-size: 1.1rem;
-    }
-    
     #banner img {
-        max-height: 40vh;
+        height: 98%;
+        max-height: 98%;
+        width: auto;
+        left: 50%;
+        top: 10px;
+        bottom: unset;
+        transform: translateX(-50%);
+        position: absolute;
+        margin: 0 auto;
+        display: block;
+        z-index: 2;
+    }
+    #cta {
+        width: 100%;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-align: center !important;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        margin: 0 auto;
+        gap: 0.7rem;
+        animation: none !important;
+        display: flex;
+        flex-direction: column;
+    }
+    #cta .title, #cta .description, #cta .name-wrapper {
+        text-align: center !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .social-media-buttons {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
