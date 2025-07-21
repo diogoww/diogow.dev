@@ -129,13 +129,19 @@
 
 #banner img:hover {
     transform: none !important;
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
+    filter: none !important;
 }
 
 #banner::before {
     display: none;
 }
 
+#banner img, #banner img:hover {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+    filter: none !important;
+}
 
 
 .shape {
@@ -156,6 +162,10 @@
     
     #banner {
         width: 45%;
+    }
+
+    #banner img {
+        animation: none;
     }
     
     .shape {
@@ -203,6 +213,7 @@
     
     #banner img {
         max-height: 50vh;
+        animation: none;
     }
     
     .shape {
@@ -223,7 +234,7 @@
     #banner {
         display: flex !important;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: center;
         width: 90vw;
         max-width: 340px;
@@ -236,17 +247,18 @@
         position: relative;
     }
     #banner img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        width: auto;
         height: 98%;
         max-height: 98%;
-        width: auto;
-        left: 50%;
-        top: 10px;
-        bottom: unset;
-        transform: translateX(-50%);
-        position: absolute;
-        margin: 0 auto;
-        display: block;
-        z-index: 2;
+        object-fit: contain;
+        align-self: flex-end;
+    }
+    #banner img:hover {
+        animation: none;
     }
     #cta {
         width: 100%;
