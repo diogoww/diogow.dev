@@ -153,24 +153,57 @@
 /* Responsividade */
 @media screen and (max-width: 1200px) {
     #home {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         padding: 2rem 5%;
+        gap: 0;
+        background: none;
     }
-    
-    #cta {
-        width: 50%;
-    }
-    
     #banner {
-        width: 45%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        width: 560px;
+        max-width: 560px;
+        min-width: unset;
+        min-height: 450px;
+        height: 450px;
+        border-radius: 36px;
+        margin-left: 0;
+        margin-right: 0;
+        background: #301934;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+        overflow: hidden;
+        position: relative;
     }
-
+    #cta {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 48%;
+        height: auto;
+        text-align: center;
+        animation: none !important;
+    }
+    #banner {
+        position: relative;
+    }
     #banner img {
-        animation: none;
-    }
-    
-    .shape {
-        width: 50%;
-        right: -5%;
+        display: block;
+        margin: 0;
+        width: auto;
+        height: 100%;
+        max-width: 95%;
+        max-height: 100%;
+        object-fit: contain;
+        align-self: flex-end;
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
     }
 }
 
@@ -223,69 +256,60 @@
 
 @media screen and (max-width: 768px) {
     #home {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         min-height: 100vh;
-        padding: 2rem 2vw 1rem;
+        padding: 2.5rem 3% 1.5rem 3%;
         gap: 1.2rem;
-        background: none !important;
+        width: 100%;
     }
     #banner {
         display: flex !important;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: 90vw;
-        max-width: 340px;
-        height: 320px;
-        margin: 0 auto 1.2rem auto;
+        align-items: flex-end;
+        justify-content: center;
+        width: 100%;
+        max-width: 320px;
+        height: 270px;
+        min-height: 270px;
+        margin: 2.5rem auto 1.2rem auto;
         background: #301934;
-        border-radius: 36px;
+        border-radius: 32px;
         box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
         overflow: hidden;
         position: relative;
     }
     #banner img {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0;
+        margin: 0 auto;
         width: auto;
-        height: 98%;
-        max-height: 98%;
+        height: 100%;
+        max-width: 92%;
+        max-height: 100%;
         object-fit: contain;
         align-self: flex-end;
-    }
-    #banner img:hover {
-        animation: none;
+        position: static;
+        top: auto;
+        left: auto;
+        transform: none;
     }
     #cta {
-        width: 100%;
-        align-items: center !important;
-        justify-content: flex-start !important;
-        text-align: center !important;
-        background: none;
-        box-shadow: none;
-        border-radius: 0;
-        padding: 0;
-        margin: 0 auto;
-        gap: 0.7rem;
-        animation: none !important;
+        margin-top: 0;
         display: flex;
         flex-direction: column;
-    }
-    #cta .title, #cta .description, #cta .name-wrapper {
-        text-align: center !important;
-        justify-content: center !important;
-        align-items: center !important;
-        margin-left: auto;
-        margin-right: auto;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+        gap: 0.7rem;
+        animation: none !important;
     }
     .social-media-buttons {
         justify-content: center;
-        margin-left: auto;
-        margin-right: auto;
+        align-items: center;
+        gap: 1rem;
+        margin: 0.7rem 0 0 0;
     }
 }
 
