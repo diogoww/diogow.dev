@@ -313,35 +313,106 @@
     }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 400px) {
     #home {
-        padding: 2rem 3% 1rem;
-        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        width: 100vw;
+        padding: 1.2rem 0 1rem 0;
+        gap: 1.2rem;
+        box-sizing: border-box;
+        background: #f6f3fa;
     }
-    
+    #banner {
+        width: 92vw;
+        max-width: 320px;
+        min-width: 0;
+        height: 180px;
+        min-height: 120px;
+        margin: 0 auto 1.2rem auto;
+        border-radius: 22px;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+        background: #301934;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0 0.5rem 0.5rem 0.5rem;
+        box-sizing: border-box;
+    }
+    #banner img {
+        max-width: 90%;
+        max-height: 100%;
+        width: auto;
+        height: 170px;
+        object-fit: contain;
+        margin: 0 auto 0 0;
+        border-radius: 16px;
+        box-sizing: border-box;
+        background: transparent;
+        display: block;
+    }
     #cta {
-        gap: 1.5rem;
+        width: 92vw;
+        max-width: 340px;
+        margin: 0 auto;
+        padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+        gap: 1.1rem;
+        align-items: center;
+        text-align: center;
+        background: #f5f5f5;
+        border-radius: 12px;
+        box-sizing: border-box;
     }
-    
     #cta .title {
-        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.3rem;
+        line-height: 1.2;
+        word-break: normal;
+        flex-wrap: nowrap;
+        white-space: normal;
+        justify-content: center;
+        text-align: center;
+        gap: 0.2rem;
     }
-    
+    #cta .title span:first-child {
+        font-size: 1.1em;
+        color: #1d1d1d;
+        font-weight: 700;
+        margin-bottom: 0.1em;
+    }
+    #cta .name-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0.1rem;
+        justify-content: center;
+        width: 100%;
+        white-space: normal;
+        font-size: 1.2em;
+        font-weight: 700;
+        color: var(--color-primary-5);
+        background: none;
+        margin-bottom: 0.1em;
+    }
     #cta .description {
         font-size: 1rem;
+        line-height: 1.4;
+        padding: 0 2px;
     }
-    
-    #banner img {
-        max-height: 35vh;
-    }
-    
     .social-media-buttons {
-        gap: 0.75rem;
+        gap: 0.7rem;
+        margin: 0.7rem 0 0 0;
+        justify-content: center;
+        align-items: center;
     }
-    
     .social-media-buttons a {
-        width: 42px;
-        height: 42px;
+        width: 40px;
+        height: 40px;
         font-size: 1.1rem;
     }
 }
@@ -367,4 +438,151 @@
         opacity: 1;
         transform: translateX(0);
     }
+}
+
+@media screen and (max-width: 430px) {
+    #cta .name-wrapper {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.2rem;
+        width: auto;
+        min-width: 0;
+        position: relative;
+        font-size: 1.1em;
+        font-weight: 700;
+        color: var(--color-primary-5);
+        background: none;
+        margin-bottom: 0.1em;
+    }
+    #cta .name-wrapper::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--color-primary-4), var(--color-primary-5));
+        border-radius: 2px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #banner {
+        width: 90vw;
+        max-width: 320px;
+        height: 170px;
+        border-radius: 18px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background: #301934;
+        margin: 0 auto 1.2rem auto;
+        box-shadow: 0 2px 12px 0 rgba(0,0,0,0.10);
+        padding: 0;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    #banner img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+        object-fit: contain;
+        margin: 0;
+        border-radius: 12px;
+        display: block;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #banner {
+        width: 92vw;
+        max-width: 270px;
+        height: 130px;
+        border-radius: 14px;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0;
+        overflow: hidden;
+    }
+    #banner img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+        object-fit: contain;
+        margin: 0;
+        border-radius: 10px;
+        display: block;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #banner {
+        width: 96vw;
+        max-width: 220px;
+        height: 100px;
+        border-radius: 12px;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0;
+        overflow: hidden;
+    }
+    #banner img {
+        height: 100%;
+        width: auto;
+        max-width: none;
+        object-fit: contain;
+        margin: 0;
+        border-radius: 8px;
+        display: block;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 360px) and (min-width: 345px) {
+    #banner {
+        width: 98vw;
+        max-width: 240px;
+        height: 120px;
+        border-radius: 14px;
+    }
+    #banner img {
+        height: 100px;
+        max-width: 96%;
+    }
+    #cta {
+        width: 98vw;
+        max-width: 260px;
+        padding: 0.7rem 0.3rem;
+    }
+    #cta .title { font-size: 0.95rem; }
+    #cta .name-wrapper { font-size: 0.95em; }
+    #cta .description { font-size: 0.85rem; }
+}
+
+@media screen and (max-width: 344px) {
+    #banner {
+        width: 99vw;
+        max-width: 200px;
+        height: 100px;
+        border-radius: 12px;
+    }
+    #banner img {
+        height: 80px;
+        max-width: 98%;
+    }
+    #cta {
+        width: 99vw;
+        max-width: 220px;
+        padding: 0.5rem 0.1rem;
+    }
+    #cta .title { font-size: 0.9rem; }
+    #cta .name-wrapper { font-size: 0.9em; }
+    #cta .description { font-size: 0.8rem; }
 }
