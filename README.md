@@ -2,7 +2,7 @@
 
 ## 📋 Sobre o Projeto
 
-Este é o meu portfólio pessoal, sou um estudante de desenvolvimento Back-End e técnico de suporte de TI. O site apresenta uma interface moderna, responsiva e interativa que destaca suas habilidades técnicas e experiência profissional.
+Este é o meu portfólio pessoal, sou um estudante de desenvolvimento Back-End e técnico de suporte de TI. O site apresenta uma interface moderna, responsiva e interativa que destaca minhas habilidades técnicas e experiência profissional.
 
 ## ✨ Características
 
